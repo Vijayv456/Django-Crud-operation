@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="container"><h3 style="display: flex;justify-content: center; align-items: center;">Create</h3></div>
+
+<div class="container">
+
+<form action="/create" method="post" autocomplete="off"> 
+    {% csrf_token  %}
+    <div class="form-group">
+        <label for="firstname">First Name</label>
+        <input type="text" name="firstname" id="firstname" class="form-control">       
+    </div>
+    <div class="form-group">
+        <label for="lastname">Last Name</label>
+        <input type="text" name="lastname" id="lastname" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="age">Age</label>
+        <input type="number" name="age" id="age" class="form-control">       
+    </div>
+    <div class="form-group">
+        <label for="phonenumber">Phone Number</label>
+        <input type="number" name="phonenumber" id="phonenumber" class="form-control">       
+    </div>
+    <div class="form-group">
+        <label for="address">Address</label>
+        <input type="text" name="address" id="address" class="form-control">       
+    </div>
+    <div class="form-group">
+        <label for="dob">Date of Birth</label>
+        <input type="date" name="dob" id="dob" class="form-control">       
+    </div>
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" class="form-control">       
+    </div>
+    <div>
+        <button type="submit" class="btn-warning btn">Submit</button>
+    </div>
+</form>
+</div>
+{% endblock %}
